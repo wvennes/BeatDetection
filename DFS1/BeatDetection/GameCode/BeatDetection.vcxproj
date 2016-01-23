@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Inline|Win32">
+      <Configuration>Debug Inline</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E39CE652-86EB-475D-BDEB-3E0353EEDF19}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BeatDetection</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\;$(ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\;$(ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\;$(ProjectDir);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /F /I "$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\$(TargetFileName)" "$(SolutionDir)Run_$(PlatformName)\"
+xcopy /D /S /Y /F /I "$(SolutionDir)RawData\*" "$(SolutionDir)Run_$(PlatformName)\Data\"
+xcopy /D /Y /F /I "$(SolutionDir)fmodex.dll" "$(SolutionDir)Run_$(PlatformName)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /F /I "$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\$(TargetFileName)" "$(SolutionDir)Run_$(PlatformName)\"
+xcopy /D /S /Y /F /I "$(SolutionDir)RawData\*" "$(SolutionDir)Run_$(PlatformName)\Data\"
+xcopy /D /Y /F /I "$(SolutionDir)fmodex.dll" "$(SolutionDir)Run_$(PlatformName)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y /F /I "$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\$(TargetFileName)" "$(SolutionDir)Run_$(PlatformName)\"
+xcopy /D /S /Y /F /I "$(SolutionDir)RawData\*" "$(SolutionDir)Run_$(PlatformName)\Data\"
+xcopy /D /Y /F /I "$(SolutionDir)fmodex.dll" "$(SolutionDir)Run_$(PlatformName)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\Main_Win32.cpp" />
+    <ClCompile Include="Application\TheApplication.cpp" />
+    <ClCompile Include="Application\TheProject.cpp" />
+    <ClCompile Include="BeatDetection\BeatDetector.cpp" />
+    <ClCompile Include="BeatDetection\Visualizer.cpp" />
+    <ClCompile Include="BeatGame\Actor.cpp" />
+    <ClCompile Include="BeatGame\Bullet.cpp" />
+    <ClCompile Include="BeatGame\Enemy.cpp" />
+    <ClCompile Include="BeatGame\EnemyDeathExplosion.cpp" />
+    <ClCompile Include="BeatGame\Explosion.cpp" />
+    <ClCompile Include="BeatGame\Player.cpp" />
+    <ClCompile Include="BeatGame\PulseRing.cpp" />
+    <ClCompile Include="BeatGame\TheGame.cpp" />
+    <ClCompile Include="BeatGame\World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\TheApplication.hpp" />
+    <ClInclude Include="Application\TheProject.hpp" />
+    <ClInclude Include="BeatDetection\BeatDetector.hpp" />
+    <ClInclude Include="BeatDetection\Visualizer.hpp" />
+    <ClInclude Include="BeatGame\Actor.hpp" />
+    <ClInclude Include="BeatGame\Bullet.hpp" />
+    <ClInclude Include="BeatGame\Enemy.hpp" />
+    <ClInclude Include="BeatGame\EnemyDeathExplosion.hpp" />
+    <ClInclude Include="BeatGame\Explosion.hpp" />
+    <ClInclude Include="BeatGame\GameCommon.hpp" />
+    <ClInclude Include="BeatGame\Player.hpp" />
+    <ClInclude Include="BeatGame\PulseRing.hpp" />
+    <ClInclude Include="BeatGame\TheGame.hpp" />
+    <ClInclude Include="BeatGame\World.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Engine\Engine.vcxproj">
+      <Project>{4e704e8c-e644-432b-b111-eac1758241a2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\RawData\Shaders\BeatPulse_fs.glsl" />
+    <None Include="..\RawData\Shaders\BeatPulse_vs.glsl" />
+    <None Include="..\RawData\Shaders\ExplosionColors_fs.glsl" />
+    <None Include="..\RawData\Shaders\ExplosionColors_vs.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Data">
+      <UniqueIdentifier>{427d94e7-513a-463c-8cce-bbdaea329120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameCode">
+      <UniqueIdentifier>{2c9fd8de-cf68-40b0-b610-e54c8c3bb5fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameCode\BeatDetection">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="GameCode\Application">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Data\Shaders">
+      <UniqueIdentifier>{7f60b51e-ad3f-45ab-8463-f75fd3148339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameCode\BeatGame">
+      <UniqueIdentifier>{c09b17c9-4bf6-4d18-86b8-e20f8c0cba5f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\Main_Win32.cpp">
+      <Filter>GameCode\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\TheApplication.cpp">
+      <Filter>GameCode\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\TheProject.cpp">
+      <Filter>GameCode\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatDetection\Visualizer.cpp">
+      <Filter>GameCode\BeatDetection</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatDetection\BeatDetector.cpp">
+      <Filter>GameCode\BeatDetection</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\TheGame.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\World.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\Player.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\Actor.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\Bullet.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\Enemy.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\Explosion.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\PulseRing.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+    <ClCompile Include="BeatGame\EnemyDeathExplosion.cpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\TheApplication.hpp">
+      <Filter>GameCode\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\TheProject.hpp">
+      <Filter>GameCode\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatDetection\Visualizer.hpp">
+      <Filter>GameCode\BeatDetection</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatDetection\BeatDetector.hpp">
+      <Filter>GameCode\BeatDetection</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\TheGame.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\World.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\Actor.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\Player.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\Bullet.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\Enemy.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\GameCommon.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\Explosion.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\PulseRing.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+    <ClInclude Include="BeatGame\EnemyDeathExplosion.hpp">
+      <Filter>GameCode\BeatGame</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\RawData\Shaders\BeatPulse_vs.glsl">
+      <Filter>Data\Shaders</Filter>
+    </None>
+    <None Include="..\RawData\Shaders\BeatPulse_fs.glsl">
+      <Filter>Data\Shaders</Filter>
+    </None>
+    <None Include="..\RawData\Shaders\ExplosionColors_vs.glsl">
+      <Filter>Data\Shaders</Filter>
+    </None>
+    <None Include="..\RawData\Shaders\ExplosionColors_fs.glsl">
+      <Filter>Data\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

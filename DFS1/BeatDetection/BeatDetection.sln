@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BeatDetection", "GameCode\BeatDetection.vcxproj", "{E39CE652-86EB-475D-BDEB-3E0353EEDF19}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "..\..\Engine\Engine.vcxproj", "{4E704E8C-E644-432B-B111-EAC1758241A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Inline|Win32 = Debug Inline|Win32
+		Debug Inline|x64 = Debug Inline|x64
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Debug Inline|Win32.ActiveCfg = Debug Inline|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Debug Inline|Win32.Build.0 = Debug Inline|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Debug Inline|x64.ActiveCfg = Debug Inline|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Debug|Win32.Build.0 = Debug|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Debug|x64.ActiveCfg = Debug|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Release|Win32.ActiveCfg = Release|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Release|Win32.Build.0 = Release|Win32
+		{E39CE652-86EB-475D-BDEB-3E0353EEDF19}.Release|x64.ActiveCfg = Release|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug Inline|Win32.ActiveCfg = Debug Inline|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug Inline|Win32.Build.0 = Debug Inline|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug Inline|x64.ActiveCfg = Debug Inline|x64
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug Inline|x64.Build.0 = Debug Inline|x64
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug|Win32.Build.0 = Debug|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug|x64.ActiveCfg = Debug|x64
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Debug|x64.Build.0 = Debug|x64
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Release|Win32.ActiveCfg = Release|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Release|Win32.Build.0 = Release|Win32
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Release|x64.ActiveCfg = Release|x64
+		{4E704E8C-E644-432B-B111-EAC1758241A2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
