@@ -12,6 +12,7 @@ __________               __    ________          __                 __  .__
 -- Known Bugs / Issues --
 
 - Too many songs in the folder will cause long load times for the game portion
+- File system grabs all files in music folder whether or not it is a valid format
 
 
 -------------------------------------------------------------------------------------------------------------
